@@ -1,0 +1,12 @@
+{
+  "name": "ember-schema-example",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcus-nl/ember-schema-example.git"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-wiredep": "latest"
+  }
+}
