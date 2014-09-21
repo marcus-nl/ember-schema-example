@@ -9,6 +9,21 @@
 		<h1>Ember Schema Example</h1>
 		{{outlet}}
 	</script>
+	<script type="text/x-handlebars" data-template-name="index">
+		<h2>{{name}}</h2>
+		<dl>
+			<dt>City</dt>
+			<dd>{{city}}</dd>
+
+			<dt>Director</dt>
+			<dd>{{director.firstName}} {{director.lastName}}</dd>
+		</dl>
+		<ul>
+		{{#each animals}}
+			<li>{{name}} - {{type}}</li>
+		{{/each}}
+		</ul>
+	</script>
 	
 	<!-- bower:js -->
 	<script src="lib/jquery/dist/jquery.js"></script>

@@ -13,9 +13,9 @@ public class ZooController {
 	@Autowired
 	private ZooService zooService;
 
-    @RequestMapping("/zoo")
+    @RequestMapping("/zoos/{id}")
     @ResponseBody
-	public Zoo getZoo() {
-		return zooService.getZoo();
+	public Zoo getZoo(String id) {
+		return zooService.getZooById(id);
 	}
 }

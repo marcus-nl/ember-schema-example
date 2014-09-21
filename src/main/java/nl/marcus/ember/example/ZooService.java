@@ -13,13 +13,15 @@ public class ZooService {
 	private final Zoo zoo;
 	
 	public ZooService() {
-		zoo = new Zoo("Winterfell Zoo", "Winterfell");
+		zoo = new Zoo("1", "Winterfell Zoo", "Winterfell");
 		zoo.setDirector(new Person("A", "B"));
 		zoo.addAnimal(new Lion("Simba"));
+		zoo.addAnimal(new Lion("Leonard"));
 		zoo.addAnimal(new Elephant("Trunky"));
+		zoo.addAnimal(new Elephant("Snuffles"));
 	}
 
-	public Zoo getZoo() {
+	public Zoo getZooById(String id) {
 		return zoo;
 	}
 }
