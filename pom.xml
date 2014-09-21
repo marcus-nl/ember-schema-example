@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>com.github.marcus-nl</groupId>
 	<artifactId>ember-schema-example</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>Ember Schema Example</name>
 	<description>Example project for Ember Schema Generator and Loader</description>
 
