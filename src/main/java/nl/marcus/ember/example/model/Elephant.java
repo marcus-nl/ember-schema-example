@@ -9,7 +9,7 @@ public class Elephant extends Animal {
 
 	@JsonCreator
 	public Elephant(@JsonProperty("name") String name) {
-		super(name);
+		super("elephant", name);
 	}
 
 	@Override

@@ -7,7 +7,7 @@ public class Lion extends Animal {
 
 	@JsonCreator
 	public Lion(@JsonProperty("name") String name) {
-		super(name);
+		super("lion", name);
 	}
 
 	@Override

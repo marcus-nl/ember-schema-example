@@ -14,7 +14,7 @@ public class ZooService {
 	
 	public ZooService() {
 		zoo = new Zoo("1", "Winterfell Zoo", "Winterfell");
-		zoo.setDirector(new Person("A", "B"));
+		zoo.setDirector(new Person("John", "Snow"));
 		zoo.addAnimal(new Lion("Simba"));
 		zoo.addAnimal(new Lion("Leonard"));
 		zoo.addAnimal(new Elephant("Trunky"));
