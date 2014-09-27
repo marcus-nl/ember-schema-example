@@ -11,7 +11,7 @@ public class Lion extends Animal {
 	}
 
 	@Override
-	public String getType() {
+	public String getDiet() {
 		return "carnivorous";
 	}
 	
@@ -23,7 +23,7 @@ public class Lion extends Animal {
 	@Override
 	public String toString() {
 		return "Lion [getName()=" + getName() + 
-				", getType()=" + getType() + 
+				", getType()=" + getDiet() + 
 				", hasManes()=" + hasManes() + 
 				"]";
 	}

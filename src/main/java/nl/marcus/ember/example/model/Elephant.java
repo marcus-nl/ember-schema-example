@@ -13,7 +13,7 @@ public class Elephant extends Animal {
 	}
 
 	@Override
-	public String getType() {
+	public String getDiet() {
 		return "herbivorous";
 	}
 
@@ -25,7 +25,7 @@ public class Elephant extends Animal {
 	@Override
 	public String toString() {
 		return "Elephant [getName()=" + getName() + 
-				", getType()=" + getType() + 
+				", getType()=" + getDiet() + 
 				", getTrunkLength()=" + getTrunkLength() + 
 				"]";
 	}

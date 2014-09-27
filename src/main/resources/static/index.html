@@ -17,23 +17,25 @@
 	<script type="text/x-handlebars" data-template-name="index">
 		<h2>{{name}}</h2>
 		<dl>
-			<dt>City</dt>
+			<dt>City:</dt>
 			<dd>{{city}}</dd>
 
-			<dt>Director</dt>
+			<dt>Director:</dt>
 			<dd>{{director.firstName}} {{director.lastName}}</dd>
 		</dl>
 		<table class="table table-striped">
 			<tr>
 				<th>Name:</th>
 				<th>Species:</th>
-				<th>Type:</th>
+				<th>Diet:</th>
+				<th>Instance:</th>
 			</tr>
 			{{#each animals}}
 			<tr>
 				<td>{{name}}</td>
 				<td>{{species}}</td>
-				<td>{{type}}</td>
+				<td>{{diet}}</td>
+				<td>{{this}}</td>
 			</tr>
 			{{/each}}
 		</table>

@@ -31,8 +31,8 @@ public abstract class Animal {
 		return name;
 	}
 
-	@JsonProperty("type")
-	public abstract String getType();
+	@JsonProperty("diet")
+	public abstract String getDiet();
 	
 	public String getFoo() {
 		return "foo";
