@@ -13,7 +13,16 @@ var App = Ember.Application.createWithMixins({
     $.ajax({ 
       url: 'http://localhost:8080/ember-schema'
     }).then(function(schema) {
-      var schemaLoader = SchemaLoader.create({ target: app, container: app });
+      var schemaLoader = SchemaLoader.createWithMixins({ 
+        target: app, 
+        container: app,
+        getClassMode: function(def) {
+          if (def.name != 'Zoo') {
+            return 'fragment';
+          }
+          return this._super();
+        }
+      });
       schemaLoader.load(schema);
       app.advanceReadiness();
     });
@@ -27,4 +36,8 @@ App.IndexRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('zoo', 1);
   }
+});
+
+Ember.Handlebars.helper('default', function(value, defaultValue) {
+  return value || defaultValue;
 });

@@ -28,6 +28,8 @@
 				<th>Name:</th>
 				<th>Species:</th>
 				<th>Diet:</th>
+				<th>Trunk Length:</th>
+				<th>Has Manes:</th>
 				<th>Instance:</th>
 			</tr>
 			{{#each animals}}
@@ -35,6 +37,8 @@
 				<td>{{name}}</td>
 				<td>{{species}}</td>
 				<td>{{diet}}</td>
+				<td>{{default trunkLength "n/a"}}</td>
+				<td>{{default hasManes "n/a"}}</td>
 				<td>{{this}}</td>
 			</tr>
 			{{/each}}

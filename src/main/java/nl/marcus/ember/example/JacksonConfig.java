@@ -1,14 +1,18 @@
 package nl.marcus.ember.example;
 
+import nl.marcus.ember.example.model.Animal;
+
 import org.reflections.Reflections;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.As;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -26,7 +30,7 @@ public class JacksonConfig extends WebMvcConfigurerAdapter {
 		
 		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		
-//		objectMapper.addMixInAnnotations(Object.class, TypeDiscriminator.class);
+		objectMapper.addMixInAnnotations(Animal.class, TypeDiscriminator.class);
 //		objectMapper.addMixInAnnotations(Object.class, ExplicitPropertiesMixin.class);
 		
 //		objectMapper.setFilters(
@@ -46,4 +50,7 @@ public class JacksonConfig extends WebMvcConfigurerAdapter {
 }
 
 @JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, property = "$type")
-abstract class TypeDiscriminator {}
+interface TypeDiscriminator {}
+
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+interface IdPropertyIdentity {}
