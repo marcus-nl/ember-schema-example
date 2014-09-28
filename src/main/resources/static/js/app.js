@@ -1,3 +1,11 @@
+var MySchemaLoader = SchemaLoader.extend({
+  customizeClassDefinition: function(def) {
+    if (def.name != 'Zoo') {
+      def.mode = 'fragment';
+    }
+  }
+});
+
 var App = Ember.Application.createWithMixins({
   LOG_TRANSITIONS: true,
   LOG_BINDINGS: true,
@@ -13,16 +21,7 @@ var App = Ember.Application.createWithMixins({
     $.ajax({ 
       url: 'http://localhost:8080/ember-schema'
     }).then(function(schema) {
-      var schemaLoader = SchemaLoader.createWithMixins({ 
-        target: app, 
-        container: app,
-        getClassMode: function(def) {
-          if (def.name != 'Zoo') {
-            return 'fragment';
-          }
-          return this._super();
-        }
-      });
+      var schemaLoader = MySchemaLoader.create({target: app, container: app });
       schemaLoader.load(schema);
       app.advanceReadiness();
     });
