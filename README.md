@@ -1,6 +1,11 @@
 # Ember Schema Example
 
-Example project using [Ember Schema Generator](https://github.com/marcus-nl/ember-schema-generator) and [Ember Schema Loader](https://github.com/marcus-nl/ember-schema-loader).
+Example project using the following technologies:
+- [Spring Boot](http://projects.spring.io/spring-boot/).
+- [Jackson Databind](https://github.com/FasterXML/jackson-databind).
+- [Ember.js](http://emberjs.com/), [Ember Data](https://github.com/emberjs/data) and [Ember Data Model Fragments](https://github.com/lytics/ember-data.model-fragments).
+- [Ember Schema Generator](https://github.com/marcus-nl/ember-schema-generator).
+- [Ember Schema Loader](https://github.com/marcus-nl/ember-schema-loader).
 
 ## License
 
