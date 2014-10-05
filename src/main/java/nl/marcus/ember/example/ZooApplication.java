@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration
 public class ZooApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ZooApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(ZooApplication.class, args);
+	}
 }

@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ZooController {
-	
+
 	@Autowired
 	private ZooService zooService;
 
-    @RequestMapping("/zoos/{id}")
-    @ResponseBody
+	@RequestMapping("/zoos/{id}")
+	@ResponseBody
 	public Zoo getZoo(String id) {
 		return zooService.getZooById(id);
 	}
